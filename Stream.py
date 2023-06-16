@@ -8,17 +8,17 @@ pn.extension('tabulator')
 
 
 # Title
-st.title("Pioneer Dashboaed")
+st.title("Pioneer Dashboard")
 
-## reading the data from url and looking for site from it
+# reading the data from url and looking for site from it
 df=pd.read_csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vQi5lnVESmIFGng5PeZj2QYEM1hEcrGxmpTCidXkbHZmR-7eswXAsSqI0ZC02tdsJ5aTKzs56F_G0n7/pub?output=csv")
 
 # taking site values
 site_values= df['Site '].unique()
 
-## making a dropdown with all the sites
+# making a dropdown with all the sites
 
-##selection box using all the unique values in site
+# selection box using all the unique values in site
 
 site = st.selectbox(" Our Sites: ", site_values)
  
@@ -113,3 +113,4 @@ if not filtered_df.empty:
     #     st.write(f"The button for {selected_name}'s WOrkOrder was clicked!")
 else:
     st.sidebar.write(f"No information found for {emp_dropdown}.")
+
