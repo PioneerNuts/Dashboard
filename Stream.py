@@ -2,6 +2,10 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+subprocess.check_call([sys.executable, "-m", "pip", "install", 'panel'])
+subprocess.check_call([sys.executable, "-m", "pip", "install", 'matplotlib'])
+
+
 import panel as pn
 import matplotlib.pyplot as plt
 pn.extension('tabulator')
